@@ -179,7 +179,7 @@ Pull request и issue приветствуются. Перед изменени�
 
 ## Лицензия
 
-MIT. Проект основан на [nettlebyte/TraceCleaner](https://github.com/nettlebyte/TraceCleaner); копирайт оригинала сохранён в [LICENSE](LICENSE).
+MIT. Полный текст — в [LICENSE](LICENSE).
 
 ## Дисклеймер
 

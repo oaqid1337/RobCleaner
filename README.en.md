@@ -179,7 +179,7 @@ Do not open a public issue for vulnerabilities. Use GitHub private reporting: **
 
 ## License
 
-MIT. Based on [nettlebyte/TraceCleaner](https://github.com/nettlebyte/TraceCleaner); the original copyright notice is preserved in [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE) for the full text.
 
 ## Disclaimer
 
