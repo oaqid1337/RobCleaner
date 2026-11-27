@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run integration test
+        shell: powershell
+        run: powershell -ExecutionPolicy Bypass -File .\tests\Test-RobCleaner.ps1

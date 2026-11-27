@@ -1,0 +1,22 @@
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
+
+# Local test output
+_whatif_output.txt
+_whatif_shared_output.txt
+release-notes.md
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build artifacts
+dist/
+*.zip
+*.sha256

@@ -1,0 +1,65 @@
+name: Предложение
+description: Идея по улучшению RobCleaner
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за идею! Опишите задачу, которую нужно решить, а не только готовое решение.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Перед отправкой
+      options:
+        - label: Я проверил существующие issue и pull request
+          required: true
+        - label: Предложение не связано с подменой HWID, обходом блокировок или античита
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему это решает?
+      description: Что неудобно или небезопасно сейчас?
+      placeholder: При запуске с -IncludeShared непонятно, какие общие данные будут затронуты.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Предлагаемое решение
+      placeholder: Добавить флаг -ListTargets, который показывает цели и их категории.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+      description: Какие ещё варианты вы рассматривали?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Область изменения
+      options:
+        - Скрипт очистки
+        - Документация
+        - Тесты
+        - CI и релизы
+        - Другое
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Дополнительный контекст
+    validations:
+      required: false

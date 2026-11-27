@@ -1,0 +1,103 @@
+name: Сообщение об ошибке
+description: Скрипт работает неправильно, падает или удаляет не то
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за отчёт! Чем точнее описание, тем быстрее получится разобраться.
+
+        Перед отправкой удалите из вывода имя пользователя, токены и другие личные данные.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Перед отправкой
+      options:
+        - label: Я прочитал README и FAQ
+          required: true
+        - label: Я закрыл игру и лаунчер перед запуском
+          required: true
+        - label: Я понимаю, что RobCleaner не подменяет HWID и не обходит блокировки
+          required: true
+        - label: В отчёте нет токенов, идентификаторов и других личных данных
+          required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Что произошло?
+      description: Опишите фактическое поведение и текст ошибки.
+      placeholder: Скрипт завершился с ошибкой на шаге [3/5]...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что вы ожидали?
+      placeholder: Ожидал, что база DevToDev будет удалена, а сохранение останется.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      description: Команды и действия по порядку.
+      placeholder: |
+        1. Открыл PowerShell
+        2. Выполнил .\RobCleaner.ps1 -WhatIf
+        3. ...
+    validations:
+      required: true
+
+  - type: input
+    id: powershell
+    attributes:
+      label: Версия PowerShell
+      description: Вывод `$PSVersionTable.PSVersion`
+      placeholder: "5.1.22621.4249"
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Версия Windows
+      placeholder: "Windows 11 23H2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Режим запуска
+      options:
+        - "-WhatIf"
+        - "Обычный запуск с подтверждением"
+        - "-Force"
+        - "-IncludeShared"
+        - "-Force -IncludeShared"
+        - "Другой"
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Вывод скрипта
+      description: Скопируйте консольный вывод. Личные данные замените на `<скрыто>`.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Дополнительный контекст
+      description: Версия RobCleaner, антивирус, особенности системы и всё, что может помочь.
+    validations:
+      required: false
